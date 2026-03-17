@@ -1,0 +1,20 @@
+import express from "express"
+import cors from "cors"
+import callRoutes from "./routes/call.routes.js"
+import voiceRoutes from "./routes/voice.routes.js"
+
+const app = express()
+
+app.use(cors())
+app.use(express.json())
+
+app.use("/call", callRoutes)
+app.use("/voice", voiceRoutes)
+
+const PORT = process.env.PORT || 5000 ; 
+
+
+app.listen(PORT, () => {
+  // console.log(`🚀 Server running at http://localhost:${PORT}`);
+  console.log("https://consummatory-sherilyn-unlugubriously.ngrok-free.dev")
+})

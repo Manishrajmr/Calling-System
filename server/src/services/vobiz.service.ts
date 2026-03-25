@@ -24,6 +24,8 @@ export const makeCall = async (phone: string, message: string) => {
       },
     );
 
+    console.log(response.data);
+
     return response.data;
   } catch (error: any) {
     console.error("FULL ERROR:", error.response?.data || error.message);

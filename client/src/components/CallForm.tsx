@@ -9,10 +9,6 @@ export default function CallForm() {
   try {
     await createCall({ phone, message });
     alert("📞 Call Initiated");
-
-    // // Trigger the voice XML on backend
-    // await voiceInitiate(message);
-    // console.log("Voice message triggered successfully");
   } catch (error) {
     console.error("Error initiating call or voice:", error);
     alert("❌ Failed to initiate call or voice");

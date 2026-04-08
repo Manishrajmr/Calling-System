@@ -1,0 +1,7 @@
+# Server specific
+Server/node_modules/
+Server/.env
+
+# Global
+node_modules/
+.env

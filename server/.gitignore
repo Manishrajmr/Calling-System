@@ -1,6 +1,3 @@
-# Server specific
-Server/node_modules/
-
-
-# Global
+.env
+.env.*
 node_modules/

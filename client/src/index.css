@@ -6,6 +6,7 @@
       opacity: 0;
       transform: translateY(10px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -13,18 +14,24 @@
   }
 
   @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-20px);
     }
   }
 
   @keyframes glow {
-    0%, 100% {
+
+    0%,
+    100% {
       box-shadow: 0 0 20px rgba(16, 163, 127, 0.3);
     }
+
     50% {
       box-shadow: 0 0 40px rgba(16, 163, 127, 0.6);
     }

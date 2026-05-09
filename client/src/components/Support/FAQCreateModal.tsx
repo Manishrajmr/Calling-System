@@ -37,13 +37,26 @@ const FAQCreateModal = ({ onClose }: { onClose: () => void }) => {
         }
     };
 
-    const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
         if (!file) return;
 
-        // UI Mock for parsing
-        alert(`File "${file.name}" selected. System will parse this ${file.type.includes('pdf') ? 'PDF' : 'CSV'} and extract Q&A pairs automatically.`);
-        // Real implementation would use FileReader or a backend endpoint
+        const formData = new FormData();
+        formData.append("file", file);
+
+        console.log("form pdf parsed data",formData);
+
+        setIsSubmitting(true);
+        try {
+            const res = await axios.post(`${API_BASE}/import-manual`,);
+            alert(res.data.message || "Import successful");
+            setSuccess(true);
+            setTimeout(onClose, 2000);
+        } catch (err: any) {
+            alert("Upload failed: " + (err.response?.data?.error || err.message));
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (

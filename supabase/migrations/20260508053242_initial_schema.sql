@@ -1,0 +1,7 @@
+-- create initial schema tables here
+-- Example:
+-- create table public.users (
+--   id uuid references auth.users not null primary key,
+--   email text unique not null,
+--   created_at timestamp with time zone default timezone('utc'::text, now()) not null
+-- );

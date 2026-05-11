@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 // Import all types from your types file
 
@@ -78,7 +79,12 @@ export default function VobizOverview() {
 
   return (
     <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-2xl font-bold mb-6 text-center">Vobiz Overview</h1>
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="text-2xl font-bold">Vobiz Overview</h1>
+        <Link to="/ai" className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+          AI Chat
+        </Link>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="p-6 bg-white rounded-xl shadow-md border border-gray-200">

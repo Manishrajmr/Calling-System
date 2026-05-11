@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc:*)",
+      "Bash(mkdir -p \"C:/Users/LENOVO/Desktop/calling system/client/src/pages\")",
+      "Bash(mkdir -p \"C:/Users/LENOVO/Desktop/calling system/client/src/components/ui\")"
+    ]
+  }
+}
